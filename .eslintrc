@@ -1,0 +1,27 @@
+{
+  "env": {
+    "browser": false,
+    "es2021": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 12,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": false
+    }
+  },
+  "ignorePatterns": ["node_modules/"],
+  "extends": [
+    // eslint와 prettier가 충돌나는 부분 비활성화 ( eslint-config-prettier )
+    "prettier",
+  ],
+  "plugins": [
+    // prettier 규칙을 eslint에 적용시키게 해줌 ( eslint-plugin-prettier )
+    "prettier",
+  ],
+  "rules": {
+    // prettier 규칙을 어기면 error 발생
+    "prettier/prettier": "error",
+  },
+}
